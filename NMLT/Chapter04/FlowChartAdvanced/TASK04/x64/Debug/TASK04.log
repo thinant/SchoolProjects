@@ -1,0 +1,3 @@
+﻿  Task04.cpp
+E:\Materials\VisualStudio\NMLT\Chapter04\FlowChartAdvanced\TASK04\Task04.cpp(55,16): warning C4244: 'initializing': conversion from 'unsigned __int64' to 'double', possible loss of data
+  TASK04.vcxproj -> E:\Materials\VisualStudio\NMLT\Chapter04\FlowChartAdvanced\x64\Debug\TASK04.exe
