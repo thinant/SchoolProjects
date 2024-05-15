@@ -1,0 +1,4 @@
+﻿  Task04.cpp
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter05\InsertOnArray\TASK04\Task04.cpp(22,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter05\InsertOnArray\TASK04\Task04.cpp(50,20): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  TASK04.vcxproj -> E:\Materials\SchoolProjects\IntroductionToCode\Chapter05\InsertOnArray\x64\Debug\TASK04.exe

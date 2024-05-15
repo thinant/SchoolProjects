@@ -1,0 +1,5 @@
+﻿  Task03.cpp
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter05\InsertOnArray\TASK03\Task03.cpp(24,59): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter05\InsertOnArray\TASK03\Task03.cpp(52,22): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter05\InsertOnArray\TASK03\Task03.cpp(72,29): warning C4018: '<=': signed/unsigned mismatch
+  TASK03.vcxproj -> E:\Materials\SchoolProjects\IntroductionToCode\Chapter05\InsertOnArray\x64\Debug\TASK03.exe
