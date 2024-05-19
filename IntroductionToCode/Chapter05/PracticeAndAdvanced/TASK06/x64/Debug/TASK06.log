@@ -1,0 +1,4 @@
+﻿  Task06.cpp
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter05\PracticeAndAdvanced\TASK06\Task06.cpp(95,28): warning C4474: 'printf' : too many arguments passed for format string
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter05\PracticeAndAdvanced\TASK06\Task06.cpp(95,28): message : placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+  TASK06.vcxproj -> E:\Materials\SchoolProjects\IntroductionToCode\Chapter05\PracticeAndAdvanced\x64\Debug\TASK06.exe

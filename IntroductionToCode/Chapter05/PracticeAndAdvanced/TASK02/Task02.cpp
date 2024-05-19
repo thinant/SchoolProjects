@@ -29,7 +29,7 @@ void tinhTongTungDayConGiam(float mangTong[], unsigned int& soLuongTong, float m
 	{
 		tong += mangThuc[i];
 
-		if (mangThuc[i] < mangThuc[i + 1])
+		if (i + 1 != soPhanTu && mangThuc[i] < mangThuc[i + 1])
 		{
 			mangTong[soLuongTong++] = tong;
 			tong = 0;
