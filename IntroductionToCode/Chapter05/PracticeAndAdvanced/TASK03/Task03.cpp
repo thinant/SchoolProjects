@@ -27,7 +27,7 @@ void nhapSoNguyenDuong(unsigned int& soPhanTu, unsigned int gioiHan)
 {
 	printf("Nhap so: ");	scanf_s("%u", &soPhanTu);
 
-	while (soPhanTu == 0 || soPhanTu > gioiHan)
+	while (soPhanTu <= 0 || soPhanTu > gioiHan)
 	{
 		printf("So phan tu khong hop le. Vui long nhap lai: ");
 		scanf_s("%u", &soPhanTu);
@@ -48,7 +48,7 @@ void nhapMangNguyen(int mangNguyen[], unsigned int& soPhanTu)
 int timPhanTuLonThuK(int mangNguyen[], unsigned int soPhanTu, unsigned int k)
 {
 	unsigned int viTriPhanTuLonThuK = 0, kichCo = 0;
-	int kPhanTuLonNhat[TOI_DA];
+	int kPhanTuLonNhat[TOI_DA]{};
 
 	for (unsigned int i = 0; i < soPhanTu; i++)
 		if (kichCo < k)

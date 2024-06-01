@@ -41,7 +41,7 @@ void nhapSoPhanTu(unsigned int& soPhanTu, unsigned int gioiHanTrai, unsigned int
 {
 	printf("Nhap so phan tu: ");	scanf_s("%u", &soPhanTu);
 
-	while (soPhanTu == gioiHanTrai || soPhanTu > gioiHanPhai)
+	while (soPhanTu < gioiHanTrai || soPhanTu > gioiHanPhai)
 	{
 		printf("So phan tu khong hop le. Vui long nhap lai: ");
 		scanf_s("%u", &soPhanTu);
