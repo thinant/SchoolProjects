@@ -1,0 +1,14 @@
+﻿  Task23.cpp
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter05\PracticeAndAdvanced\TASK23\Task23.cpp(74,11): warning C4473: 'scanf_s' : not enough arguments passed for format string
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter05\PracticeAndAdvanced\TASK23\Task23.cpp(74,11): message : placeholders and their parameters expect 2 variadic arguments, but 1 were provided
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter05\PracticeAndAdvanced\TASK23\Task23.cpp(74,11): message : the missing variadic argument 2 is required by format string '%c'
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter05\PracticeAndAdvanced\TASK23\Task23.cpp(74,11): message : this argument is used as a buffer size
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter05\PracticeAndAdvanced\TASK23\Task23.cpp(79,13): warning C4473: 'scanf_s' : not enough arguments passed for format string
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter05\PracticeAndAdvanced\TASK23\Task23.cpp(79,13): message : placeholders and their parameters expect 2 variadic arguments, but 1 were provided
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter05\PracticeAndAdvanced\TASK23\Task23.cpp(79,13): message : the missing variadic argument 2 is required by format string '%c'
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter05\PracticeAndAdvanced\TASK23\Task23.cpp(79,13): message : this argument is used as a buffer size
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter05\PracticeAndAdvanced\TASK23\Task23.cpp(83,13): warning C4473: 'scanf_s' : not enough arguments passed for format string
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter05\PracticeAndAdvanced\TASK23\Task23.cpp(83,13): message : placeholders and their parameters expect 2 variadic arguments, but 1 were provided
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter05\PracticeAndAdvanced\TASK23\Task23.cpp(83,13): message : the missing variadic argument 2 is required by format string '%c'
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter05\PracticeAndAdvanced\TASK23\Task23.cpp(83,13): message : this argument is used as a buffer size
+  TASK23.vcxproj -> E:\Materials\SchoolProjects\IntroductionToCode\Chapter05\PracticeAndAdvanced\x64\Debug\TASK23.exe

@@ -1,0 +1,3 @@
+﻿  Task22.cpp
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter05\PracticeAndAdvanced\TASK22\Task22.cpp(61,18): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  TASK22.vcxproj -> E:\Materials\SchoolProjects\IntroductionToCode\Chapter05\PracticeAndAdvanced\x64\Debug\TASK22.exe
