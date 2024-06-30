@@ -1,0 +1,6 @@
+﻿  Task05.cpp
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\Basic\TASK05\Task05.cpp(15,9): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type 'size_t'
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\Basic\TASK05\Task05.cpp(15,9): message : consider using '%zu' in the format string
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\Basic\TASK05\Task05.cpp(20,9): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type 'size_t'
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\Basic\TASK05\Task05.cpp(20,9): message : consider using '%zu' in the format string
+  TASK05.vcxproj -> E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\Basic\x64\Debug\TASK05.exe

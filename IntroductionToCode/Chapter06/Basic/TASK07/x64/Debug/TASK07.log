@@ -1,0 +1,3 @@
+﻿  Task07.cpp
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\Basic\TASK07\Task07.cpp(25,41): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+  TASK07.vcxproj -> E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\Basic\x64\Debug\TASK07.exe
