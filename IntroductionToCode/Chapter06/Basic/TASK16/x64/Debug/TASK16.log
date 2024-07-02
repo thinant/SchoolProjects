@@ -1,0 +1,3 @@
+﻿  Task16.cpp
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\Basic\TASK16\Task16.cpp(26,27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  TASK16.vcxproj -> E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\Basic\x64\Debug\TASK16.exe
