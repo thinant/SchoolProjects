@@ -1,0 +1,5 @@
+﻿  Task22.cpp
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\Basic\TASK22\Task22.cpp(33,36): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\Basic\TASK22\Task22.cpp(33,64): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\Basic\TASK22\Task22.cpp(39,24): warning C4244: 'initializing': conversion from '__int64' to 'unsigned int', possible loss of data
+  TASK22.vcxproj -> E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\Basic\x64\Debug\TASK22.exe

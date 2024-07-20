@@ -1,0 +1,7 @@
+﻿  Task20.cpp
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\Basic\TASK20\Task20.cpp(16,10): warning C4473: 'scanf_s' : not enough arguments passed for format string
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\Basic\TASK20\Task20.cpp(16,10): message : placeholders and their parameters expect 2 variadic arguments, but 1 were provided
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\Basic\TASK20\Task20.cpp(16,10): message : the missing variadic argument 2 is required by format string '%c'
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\Basic\TASK20\Task20.cpp(16,10): message : this argument is used as a buffer size
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\Basic\TASK20\Task20.cpp(27,56): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+  TASK20.vcxproj -> E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\Basic\x64\Debug\TASK20.exe
