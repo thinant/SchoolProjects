@@ -1,0 +1,5 @@
+﻿  Task07.cpp
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\PracticeAndAdvanced\TASK07\Task07.cpp(26,41): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\PracticeAndAdvanced\TASK07\Task07.cpp(28,20): warning C4018: '<': signed/unsigned mismatch
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\PracticeAndAdvanced\TASK07\Task07.cpp(40,12): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+  TASK07.vcxproj -> E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\PracticeAndAdvanced\x64\Debug\TASK07.exe
