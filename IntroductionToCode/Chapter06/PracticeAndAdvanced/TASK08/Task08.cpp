@@ -4,9 +4,11 @@
 #include <conio.h>
 #include <Windows.h>
 
+#define TOI_DA 10000
+
 void nhapVanBanTrucTiep();
 void diChuyenConTro(int x, int y);
-void xoaKyTu();
+void xoaKyTu(char chuoi[], int x, int y);
 
 int main()
 {
@@ -19,12 +21,14 @@ int main()
 
 void nhapVanBanTrucTiep()
 {
-    int x = 1, y = 1;
+    int x = 0, y = 1, viTri = 0;
     char kiTu = '\0';
+    char chuoi[TOI_DA + 1] = "";
+    int doDaiHang[1000], soHang = 0, soKiTuTrenHang = 0;
     
     diChuyenConTro(x, y);
 
-    while (true)
+    while (strlen(chuoi) < TOI_DA)
     {
         kiTu = _getch();
 
@@ -38,7 +42,10 @@ void nhapVanBanTrucTiep()
             {
             case 72: //mui ten len
                 if (y > 1)
+                {
                     y--;
+                    viTri -= doDaiHang[y];
+                }
                 break;
             case 80: //mui ten xuong
                 y++;
@@ -62,11 +69,7 @@ void nhapVanBanTrucTiep()
                 }
                 break;
             case 83: //nut del
-                x++;
-                diChuyenConTro(x, y);
-                xoaKyTu();
-                x--;
-                diChuyenConTro(x, y);
+                xoaKyTu(chuoi, x, y);
                 break;
             }
         }
@@ -77,27 +80,49 @@ void nhapVanBanTrucTiep()
                 x = 1000;
                 y--;
             }
-            xoaKyTu();
-            x--;
+            else 
+                x--;
+
+            xoaKyTu(chuoi, x, y);
             diChuyenConTro(x, y);
         }
         else if (kiTu == '\n' || kiTu == '\r')
         {
-            x = 1;
+            x = 0;
             y++;
+            
+            doDaiHang[soHang++] = soKiTuTrenHang;
+            soKiTuTrenHang = 0;
+
+            chuoi[viTri++] = '\n';
+            chuoi[viTri] = '\0';
         }
         else if (kiTu >= 32 && kiTu <= 126)
         {
-            putchar(kiTu);
+            chuoi[viTri++] = kiTu;
+            chuoi[viTri] = '\0';
 
-            if (x <= 1000)
-                x++;
-            else
+            x++;
+            soKiTuTrenHang++;
+
+            if (x > 1000)
             {
-                x = 1;
+                x = 0;
                 y++;
+
+                doDaiHang[soHang++] = soKiTuTrenHang;
+                soKiTuTrenHang = 0;
+
+                chuoi[viTri++] = '\n';
+                chuoi[viTri] = '\0';
             }
         }
+
+        system("cls");
+
+        printf("Nhap van ban va su dung phim mui ten de di chuyen, phim ESC de thoat:\n");
+        printf("%s", chuoi);
+
         diChuyenConTro(x, y);
         fflush(stdout);
     }
@@ -113,7 +138,12 @@ void diChuyenConTro(int x, int y)
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
-void xoaKyTu()
+void xoaKyTu(char chuoi[], int x, int y)
 {
-    printf("\b \b");
+    if (!(x > 0 && y > 0 && x + (y-1) * 1000 < TOI_DA))
+        return;
+
+    int doDaiChuoi = strlen(chuoi);
+    for (int i = x + (y - 1) * 1000; i < doDaiChuoi; i++)
+        chuoi[i] = chuoi[i + 1];
 }
