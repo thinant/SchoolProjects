@@ -10,7 +10,8 @@ void nhapVanBanTrucTiep();
 void diChuyenConTro(int x, int y);
 void xoaKyTu(char chuoi[], int viTri);
 void chenKyTu(char chuoi[], int viTri, char kyTu);
-//void chenHang(int doDaiHang[], int& soHang, int& viTriHang);
+void chenHang(int doDaiHang[], int& soHang, int viTriHang);
+void xoaHang(int doDaiHang[], int& soHang, int viTriHang);
 
 int main()
 {
@@ -26,7 +27,7 @@ void nhapVanBanTrucTiep()
     int x = 0, y = 1, viTri = 0;
     char kiTu = '\0';
     char chuoi[TOI_DA + 1] = "";
-    int doDaiHang[1000], soHang = 0, soKiTuTrenHang = 0;
+    int doDaiHang[1000]{0}, soHang = 1, soKiTuTrenHang = 0;
     
     diChuyenConTro(x, y);
 
@@ -35,7 +36,11 @@ void nhapVanBanTrucTiep()
         kiTu = _getch();
 
         if (kiTu == 27) //ESC
+        {
+            diChuyenConTro(0, soHang + 1);
+            fflush(stdout);
             break;
+        }
 
         if (kiTu == -32)
         {
@@ -46,18 +51,36 @@ void nhapVanBanTrucTiep()
                 if (y > 1)
                 {
                     y--;
-                    viTri -= doDaiHang[y];
+                    if (doDaiHang[y - 1] < x)
+                    {
+                        viTri -= (x + 1);
+                        x = doDaiHang[y - 1];
+                    }
+                    else
+                        viTri -= (doDaiHang[y - 1] + 1);
                 }
                 break;
             case 80: //mui ten xuong
                 y++;
-                if (y > 1) 
-                    viTri -= doDaiHang[y-1];
+                if (y > 1)
+                {
+                    if (doDaiHang[y - 1] < x)
+                    {
+                        x = doDaiHang[y - 1];
+                        viTri += (doDaiHang[y - 1] + 2);
+                    }
+                    else
+                        viTri += (doDaiHang[y - 2] + 1);
+                }
                 break;
             case 75: //mui ten trai
                 if (x > 0)
-                    
                     x--;
+                else if (y > 1)
+                {
+                    y--;
+                    x = doDaiHang[y - 1];
+                }
                 else if (y > 1)
                 {
                     y--;
@@ -66,17 +89,29 @@ void nhapVanBanTrucTiep()
                 viTri--;
                 break;
             case 77: //mui ten phai
-                if (x <= 1000)
-                    x++;
-                else
+                if (x < doDaiHang[y - 1])
                 {
-                    x = 1;
-                    y++;
+                    x++;
+                    viTri++;
                 }
-                viTri++;
+                else if (y < soHang)
+                {
+                    x = 0;
+                    y++;
+                    viTri++;
+                }
                 break;
             case 83: //nut del
                 xoaKyTu(chuoi, viTri);
+                if (doDaiHang[y - 1] != 0) 
+                    doDaiHang[y - 1]--;
+                else if (y > 1)
+                {
+                    x = doDaiHang[y - 2];
+                    doDaiHang[y - 2] += doDaiHang[y - 1];
+                    xoaHang(doDaiHang, soHang, y - 1);
+                    y--;
+                }
                 break;
             }
         }
@@ -87,14 +122,18 @@ void nhapVanBanTrucTiep()
                 if (y >= 2)
                 {
                     x = doDaiHang[y - 2];
-                    doDaiHang[y - 2] += soKiTuTrenHang;
+                    doDaiHang[y - 2] += doDaiHang[y - 1];
+                    xoaHang(doDaiHang, soHang, y - 1);
                     y--;
                 }
                 else
                     continue;
             }
-            else 
+            else
+            {
                 x--;
+                doDaiHang[y - 1]--;
+            }
 
             viTri--;
             xoaKyTu(chuoi, viTri);
@@ -102,29 +141,27 @@ void nhapVanBanTrucTiep()
         }
         else if (kiTu == '\n' || kiTu == '\r')
         {
+            chenKyTu(chuoi, viTri++, '\n');
+            chenHang(doDaiHang, soHang, y);
+            doDaiHang[y] = doDaiHang[y - 1] - x;
+            doDaiHang[y - 1] = x;
             x = 0;
             y++;
-            
-            doDaiHang[y++] = x;
-            soKiTuTrenHang -= x;
-            doDaiHang[y] = soKiTuTrenHang;
-
-            chenKyTu(chuoi, viTri++, '\n');
         }
         else if (kiTu >= 32 && kiTu <= 126)
         {
             chenKyTu(chuoi, viTri++, kiTu);
 
             x++;
-            soKiTuTrenHang++;
+            doDaiHang[y - 1]++;
 
             if (x > 1000)
             {
                 x = 0;
                 y++;
 
-                doDaiHang[soHang++] = soKiTuTrenHang;
-                soKiTuTrenHang = 0;
+                doDaiHang[y-1] = 0;
+                soHang++;
 
                 chenKyTu(chuoi, viTri++, '\n');
             }
@@ -170,4 +207,18 @@ void chenKyTu(char chuoi[], int viTri, char kyTu)
         chuoi[i] = chuoi[i - 1];
 
     chuoi[viTri] = kyTu;
+}
+
+void chenHang(int doDaiHang[], int& soHang, int viTriHang)
+{
+    soHang++;
+    for (int i = soHang - 1; i > viTriHang; i--)
+        doDaiHang[i] = doDaiHang[i - 1];
+}
+
+void xoaHang(int doDaiHang[], int& soHang, int viTriHang)
+{
+    soHang--;
+    for (int i = viTriHang; i < soHang; i++)
+        doDaiHang[i] = doDaiHang[i + 1];
 }

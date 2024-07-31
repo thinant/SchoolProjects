@@ -1,4 +1,4 @@
 ﻿  Task08.cpp
-E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\PracticeAndAdvanced\TASK08\Task08.cpp(157,35): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\PracticeAndAdvanced\TASK08\Task08.cpp(167,35): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\PracticeAndAdvanced\TASK08\Task08.cpp(195,35): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\PracticeAndAdvanced\TASK08\Task08.cpp(205,35): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   TASK08.vcxproj -> E:\Materials\SchoolProjects\IntroductionToCode\Chapter06\PracticeAndAdvanced\x64\Debug\TASK08.exe
