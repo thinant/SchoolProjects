@@ -10,22 +10,23 @@ bool kiemTraGiaTriLaSoNguyenDuong(char giaTri[]);
 bool kiemTraGiaTriLaSoNguyen(char giaTri[]);
 unsigned int chuyenChuoiThanhSoNguyenDuong(char giaTri[]);
 int chuyenChuoiThanhSoNguyen(char giaTri[]);
-int tinhTongChanTrenMaTran(MANG2D_NGUYEN maTran, unsigned int soDong, unsigned int soCot);
+int tinhTongNguyenToTrenMaTran(MANG2D_NGUYEN maTran, unsigned int soDong, unsigned int soCot);
+bool kiemTraSoNguyenTo(int soNguyen);
 
 int main()
 {
 	MANG2D_NGUYEN maTran{ 0 };
 	unsigned int soDong = 0, soCot = 0;
-	int tongChan = 0;
+	int tongNguyenTo = 0;
 
 	nhapMaTranNguyen(maTran, soDong, soCot);
 
 	printf("Ma tran da nhap la:\n");
 	xuatMaTranNguyen(maTran, soDong, soCot);
 
-	tongChan = tinhTongChanTrenMaTran(maTran, soDong, soCot);
+	tongNguyenTo = tinhTongNguyenToTrenMaTran(maTran, soDong, soCot);
 
-	printf("Tong phan tu chan trong ma tran la: %d", tongChan);
+	printf("Tong phan tu nguyen to trong ma tran la: %d", tongNguyenTo);
 
 	return 0;
 }
@@ -138,12 +139,22 @@ int chuyenChuoiThanhSoNguyen(char giaTri[])
 	return so;
 }
 
-int tinhTongChanTrenMaTran(MANG2D_NGUYEN maTran, unsigned int soDong, unsigned int soCot)
+int tinhTongNguyenToTrenMaTran(MANG2D_NGUYEN maTran, unsigned int soDong, unsigned int soCot)
 {
-	int tongChan = 0;
+	int tongNguyenTo = 0;
 	for (unsigned int i = 0; i < soDong; i++)
 		for (unsigned int j = 0; j < soCot; j++)
-			if (maTran[i][j] % 2 == 0) tongChan += maTran[i][j];
+			if (kiemTraSoNguyenTo(maTran[i][j])) tongNguyenTo += maTran[i][j];
 
-	return tongChan;
+	return tongNguyenTo;
+}
+
+bool kiemTraSoNguyenTo(int soNguyen)
+{
+	if (soNguyen < 2) return false;
+
+	for (unsigned int i = 2; i <= soNguyen / 2; i++)
+		if (soNguyen % i == 0) return false;
+
+	return true;
 }
