@@ -1,0 +1,5 @@
+﻿  Task07.cpp
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter07\SearchMatrix\TASK07\Task07.cpp(154,20): warning C4018: '<': signed/unsigned mismatch
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter07\SearchMatrix\TASK07\Task07.cpp(155,21): warning C4018: '<': signed/unsigned mismatch
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter07\SearchMatrix\TASK07\Task07.cpp(172,29): warning C4018: '<=': signed/unsigned mismatch
+  TASK07.vcxproj -> E:\Materials\SchoolProjects\IntroductionToCode\Chapter07\SearchMatrix\x64\Debug\TASK07.exe

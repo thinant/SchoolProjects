@@ -10,27 +10,32 @@ bool kiemTraGiaTriLaSoNguyenDuong(char giaTri[]);
 bool kiemTraGiaTriLaSoNguyen(char giaTri[]);
 unsigned int chuyenChuoiThanhSoNguyenDuong(char giaTri[]);
 int chuyenChuoiThanhSoNguyen(char giaTri[]);
-void timSoChanCuoiCungTrenMaTran(MANG2D_NGUYEN maTran, unsigned int soDong, unsigned int soCot, int& viTriDongChanCuoiCung, int& viTriCotChanCuoiCung);
+void timCacPhanTuCucDaiTrenMaTran(MANG2D_NGUYEN maTran, unsigned int soDong, unsigned int soCot,
+	MANG2D_NGUYEN maTranDanhDauCucDai, unsigned int& soPhanTuCucDai);
 
 int main()
 {
-	MANG2D_NGUYEN maTran{ 0 };
-	unsigned int soDong = 0, soCot = 0;
-	int viTriDongChanCuoiCung = 0, viTriCotChanCuoiCung = 0;
+	MANG2D_NGUYEN maTran{ 0 }, maTranDanhDauCucDai{ 0 };
+	unsigned int soDong = 0, soCot = 0, soPhanTuCucDai = 0;
 
-	nhapMaTranNguyen(maTran, soDong, soCot);
+	nhapMaTranNguyen(maTran, soDong, soCot);;
 
-	printf("Ma tran da nhap la:\n");
+	printf("\nMa tran da nhap la:\n");
 	xuatMaTranNguyen(maTran, soDong, soCot);
 
-	timSoChanCuoiCungTrenMaTran(maTran, soDong, soCot, viTriDongChanCuoiCung, viTriCotChanCuoiCung);
+	timCacPhanTuCucDaiTrenMaTran(maTran, soDong, soCot,
+		maTranDanhDauCucDai, soPhanTuCucDai);
 
-	if (viTriDongChanCuoiCung == -1)
-		printf("Mang khong co phan tu chan nao.\n");
+	if (soPhanTuCucDai <= 0)
+		printf("\nMa tran khong co phan tu cuc dai.");
 	else
 	{
-		printf("Phan tu chan cuoi cung trong ma tran la: %d, o vi tri [%u][%u]",
-			maTran[viTriDongChanCuoiCung][viTriCotChanCuoiCung], viTriDongChanCuoiCung, viTriCotChanCuoiCung);
+		printf("\nMa tran co %d phan tu cuc dai:\n", soPhanTuCucDai);
+		
+		for (unsigned int i = 0; i < soDong; i++)
+			for (unsigned int j = 0; j < soCot; j++)
+				if (maTranDanhDauCucDai[i][j] == 1)
+					printf("%d o vi tri [%u][%u]\n", maTran[i][j], i, j);
 	}
 
 	return 0;
@@ -84,6 +89,12 @@ void xuatMaTranNguyen(MANG2D_NGUYEN maTran, unsigned int soDong, unsigned int so
 		printf("\n");
 	}
 
+}
+
+void xuatMangNguyen(int mangNguyen[], unsigned int soPhanTu)
+{
+	for (unsigned int i = 0; i < soPhanTu; i++)
+		printf("%d ", mangNguyen[i]);
 }
 
 bool kiemTraGiaTriLaSoNguyenDuong(char giaTri[])
@@ -144,17 +155,24 @@ int chuyenChuoiThanhSoNguyen(char giaTri[])
 	return so;
 }
 
-void timSoChanCuoiCungTrenMaTran(MANG2D_NGUYEN maTran, unsigned int soDong, unsigned int soCot,
-	int& viTriDongChanCuoiCung, int& viTriCotChanCuoiCung)
+void timCacPhanTuCucDaiTrenMaTran(MANG2D_NGUYEN maTran, unsigned int soDong, unsigned int soCot,
+	MANG2D_NGUYEN maTranDanhDauCucDai, unsigned int& soPhanTuCucDai)
 {
-	viTriDongChanCuoiCung = -1, viTriCotChanCuoiCung = -1;
+	soPhanTuCucDai = 0;
 
-	for (int i = soDong - 1; i >= 0; i--)
-		for (int j = soCot - 1; j >= 0; j--)
-			if (maTran[i][j] % 2 == 0)
+	for (unsigned int i = 0; i < soDong; i++)
+		for (int j = 0; j < soCot; j++)
+		{
+			if ((i == 0 || maTran[i][j] > maTran[i - 1][j]) &&
+				(i == soDong - 1 || maTran[i][j] > maTran[i + 1][j]) &&
+				(j == 0 || maTran[i][j] > maTran[i][j - 1]) &&
+				(j == soCot - 1 || maTran[i][j] > maTran[i][j + 1]) &&
+				(i == 0 || j == 0 || maTran[i][j] > maTran[i - 1][j - 1]) &&
+				(i == soDong - 1 || j == soCot - 1 || maTran[i][j] > maTran[i + 1][j + 1]))
 			{
-				viTriDongChanCuoiCung = i;
-				viTriCotChanCuoiCung = j;
-				return;
+				maTranDanhDauCucDai[i][j] = 1;
+				soPhanTuCucDai++;
 			}
+			else maTranDanhDauCucDai[i][j] = 0;
+		}
 }
