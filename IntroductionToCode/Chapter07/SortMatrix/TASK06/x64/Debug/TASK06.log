@@ -1,0 +1,4 @@
+﻿  Task06.cpp
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter07\SortMatrix\TASK06\Task06.cpp(190,18): warning C4018: '>=': signed/unsigned mismatch
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter07\SortMatrix\TASK06\Task06.cpp(195,20): warning C4018: '>=': signed/unsigned mismatch
+  TASK06.vcxproj -> E:\Materials\SchoolProjects\IntroductionToCode\Chapter07\SortMatrix\x64\Debug\TASK06.exe
