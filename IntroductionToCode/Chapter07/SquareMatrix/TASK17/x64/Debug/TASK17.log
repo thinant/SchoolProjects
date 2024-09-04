@@ -1,0 +1,4 @@
+﻿  Task17.cpp
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter07\SquareMatrix\TASK17\Task17.cpp(200,40): warning C4018: '<': signed/unsigned mismatch
+E:\Materials\SchoolProjects\IntroductionToCode\Chapter07\SquareMatrix\TASK17\Task17.cpp(215,40): warning C4018: '<': signed/unsigned mismatch
+  TASK17.vcxproj -> E:\Materials\SchoolProjects\IntroductionToCode\Chapter07\SquareMatrix\x64\Debug\TASK17.exe
