@@ -53,6 +53,8 @@ void nhapMaTranThuc(MANG2D_THUC maTran, unsigned int& soDong, unsigned int& soCo
 	}
 	soDong = chuyenChuoiThanhSoNguyenDuong(giaTri);
 
+	
+
 	printf("Nhap so cot cua ma tran: ");
 	scanf_s("%s", &giaTri, 20);
 	while (!kiemTraGiaTriLaSoNguyenDuong(giaTri))
@@ -107,6 +109,9 @@ bool kiemTraGiaTriLaSoNguyenDuong(char giaTri[])
 	for (unsigned int i = 0; i < strlen(giaTri); i++)
 		if (giaTri[i] < '0' || giaTri[i] > '9')
 			return false;
+
+	if (chuyenChuoiThanhSoNguyenDuong(giaTri) < KICH_THUOC)
+		return false;
 
 	return true;
 }
