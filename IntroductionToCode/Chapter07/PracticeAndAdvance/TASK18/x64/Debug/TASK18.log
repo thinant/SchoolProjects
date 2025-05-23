@@ -1,0 +1,6 @@
+﻿  Task18.cpp
+D:\Materials\SchoolProjects\IntroductionToCode\Chapter07\PracticeAndAdvance\TASK18\Task18.cpp(169,17): warning C4018: '<=': signed/unsigned mismatch
+D:\Materials\SchoolProjects\IntroductionToCode\Chapter07\PracticeAndAdvance\TASK18\Task18.cpp(198,15): warning C4018: '>': signed/unsigned mismatch
+D:\Materials\SchoolProjects\IntroductionToCode\Chapter07\PracticeAndAdvance\TASK18\Task18.cpp(214,16): warning C4018: '<=': signed/unsigned mismatch
+D:\Materials\SchoolProjects\IntroductionToCode\Chapter07\PracticeAndAdvance\TASK18\Task18.cpp(226,9): warning C4018: '>=': signed/unsigned mismatch
+  TASK18.vcxproj -> D:\Materials\SchoolProjects\IntroductionToCode\Chapter07\PracticeAndAdvance\x64\Debug\TASK18.exe
