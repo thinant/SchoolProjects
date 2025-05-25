@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\Materials\\SchoolProjects\\IntroductionToCode\\Chapter07\\PracticeAndAdvance\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D892592B-3FF3-4334-AC9A-01CA4C6F0BC8}|TASK19\\TASK19.vcxproj|D:\\Materials\\SchoolProjects\\IntroductionToCode\\Chapter07\\PracticeAndAdvance\\TASK19\\Task19.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D892592B-3FF3-4334-AC9A-01CA4C6F0BC8}|TASK19\\TASK19.vcxproj|solutionrelative:TASK19\\Task19.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{214B394A-8A87-4B8E-8700-4F362C9F8CB2}|TASK17\\TASK17.vcxproj|D:\\Materials\\SchoolProjects\\IntroductionToCode\\Chapter07\\PracticeAndAdvance\\TASK17\\Task17.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{214B394A-8A87-4B8E-8700-4F362C9F8CB2}|TASK17\\TASK17.vcxproj|solutionrelative:TASK17\\Task17.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F97BCF42-7728-43E1-AB23-EFEABE2DA733}|TASK18\\TASK18.vcxproj|D:\\Materials\\SchoolProjects\\IntroductionToCode\\Chapter07\\PracticeAndAdvance\\TASK18\\Task18.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F97BCF42-7728-43E1-AB23-EFEABE2DA733}|TASK18\\TASK18.vcxproj|solutionrelative:TASK18\\Task18.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
@@ -19,12 +27,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Task19.cpp",
+              "DocumentMoniker": "D:\\Materials\\SchoolProjects\\IntroductionToCode\\Chapter07\\PracticeAndAdvance\\TASK19\\Task19.cpp",
+              "RelativeDocumentMoniker": "TASK19\\Task19.cpp",
+              "ToolTip": "D:\\Materials\\SchoolProjects\\IntroductionToCode\\Chapter07\\PracticeAndAdvance\\TASK19\\Task19.cpp",
+              "RelativeToolTip": "TASK19\\Task19.cpp",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAkwDEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-25T10:28:43.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Task17.cpp",
+              "DocumentMoniker": "D:\\Materials\\SchoolProjects\\IntroductionToCode\\Chapter07\\PracticeAndAdvance\\TASK17\\Task17.cpp",
+              "RelativeDocumentMoniker": "TASK17\\Task17.cpp",
+              "ToolTip": "D:\\Materials\\SchoolProjects\\IntroductionToCode\\Chapter07\\PracticeAndAdvance\\TASK17\\Task17.cpp",
+              "RelativeToolTip": "TASK17\\Task17.cpp",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAqwCkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-25T10:28:18.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Task18.cpp",
               "DocumentMoniker": "D:\\Materials\\SchoolProjects\\IntroductionToCode\\Chapter07\\PracticeAndAdvance\\TASK18\\Task18.cpp",
               "RelativeDocumentMoniker": "TASK18\\Task18.cpp",
               "ToolTip": "D:\\Materials\\SchoolProjects\\IntroductionToCode\\Chapter07\\PracticeAndAdvance\\TASK18\\Task18.cpp",
               "RelativeToolTip": "TASK18\\Task18.cpp",
-              "ViewState": "AgIAAKMAAAAAAAAAAAAkwKoAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAACcBAAAAAAAAAAAqwDoBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-05-22T10:57:42.15Z",
               "EditorCaption": ""
