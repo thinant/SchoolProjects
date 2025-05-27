@@ -1,0 +1,6 @@
+﻿  Task20.cpp
+D:\Materials\SchoolProjects\IntroductionToCode\Chapter07\PracticeAndAdvance\TASK20\Task20.cpp(160,27): warning C4244: '+=': conversion from 'double' to 'unsigned int', possible loss of data
+D:\Materials\SchoolProjects\IntroductionToCode\Chapter07\PracticeAndAdvance\TASK20\Task20.cpp(172,26): warning C4244: '+=': conversion from 'double' to 'unsigned int', possible loss of data
+D:\Materials\SchoolProjects\IntroductionToCode\Chapter07\PracticeAndAdvance\TASK20\Task20.cpp(183,36): warning C4244: '+=': conversion from 'double' to 'unsigned int', possible loss of data
+D:\Materials\SchoolProjects\IntroductionToCode\Chapter07\PracticeAndAdvance\TASK20\Task20.cpp(184,47): warning C4244: '+=': conversion from 'double' to 'unsigned int', possible loss of data
+  TASK20.vcxproj -> D:\Materials\SchoolProjects\IntroductionToCode\Chapter07\PracticeAndAdvance\x64\Debug\TASK20.exe
