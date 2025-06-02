@@ -1,0 +1,3 @@
+﻿  Task21.cpp
+D:\Materials\SchoolProjects\IntroductionToCode\Chapter07\PracticeAndAdvance\TASK21\Task21.cpp(75,1): warning C4715: 'baiToan8Hau': not all control paths return a value
+  TASK21.vcxproj -> D:\Materials\SchoolProjects\IntroductionToCode\Chapter07\PracticeAndAdvance\x64\Debug\TASK21.exe
