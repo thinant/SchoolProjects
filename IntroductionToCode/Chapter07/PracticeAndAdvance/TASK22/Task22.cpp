@@ -10,9 +10,7 @@ typedef int MANG2D[TOI_DA][TOI_DA];
 void xuatDuongDi(int lichSuDong[], int lichSuCot[]);
 void baiToanMaDiTuan(MANG2D maTran, int lichSuDong[], int lichSuCot[]);
 int cachDiTiepTheo(MANG2D maTran, int i, int j);
-int tinhKhoangCachCanh(int i, int j);
-int tinhKhoangCachGoc(int i, int j);
-
+int tinhSoDuongDi(MANG2D maTran, int i, int j);
 int main()
 {
 	MANG2D maTran = { 0 };
@@ -59,52 +57,36 @@ void baiToanMaDiTuan(MANG2D maTran, int lichSuDong[], int lichSuCot[]) {
 int cachDiTiepTheo(MANG2D maTran, int i, int j) {
 	int huongDi_i = 0;
 	int huongDi_j = 0;
-	int canhNhoNhat = 0;
-	int gocNhoNhat = 0;
-	int viTriNhoNhat = 0;
-	bool laHuongDiDauTien = true;
+	int soDuongDiNhoNhat = 0;
+	int viTriNhoNhat = -1;
 
 	for (int viTri = 0; viTri < TOI_DA; viTri++) {
 		huongDi_i = i + HUONGDI_DOC[viTri];
 		huongDi_j = j + HUONGDI_NGANG[viTri];
 
-		if (huongDi_i < 0 || huongDi_i >= TOI_DA || huongDi_j < 0 || huongDi_j >= TOI_DA)
+		if (huongDi_i < 0 || huongDi_i >= TOI_DA || huongDi_j < 0 || huongDi_j >= TOI_DA || maTran[huongDi_i][huongDi_j] != 0)
 			continue;
 
-		int khoangCachCanh = tinhKhoangCachCanh(huongDi_i, huongDi_j);
-		int khoangCachGoc = tinhKhoangCachGoc(huongDi_i, huongDi_j);
+		int soDuongDi = tinhSoDuongDi(maTran, huongDi_i, huongDi_j);
 
-		if (laHuongDiDauTien || 
-			khoangCachCanh < canhNhoNhat || 
-			(khoangCachCanh == canhNhoNhat && khoangCachGoc < gocNhoNhat)) {
-			if (maTran[huongDi_i][huongDi_j] == 0) {
-				viTriNhoNhat = viTri;
-				canhNhoNhat = khoangCachCanh;
-				laHuongDiDauTien = false;
+		if (viTriNhoNhat == -1 || soDuongDiNhoNhat == 0 || soDuongDi < soDuongDiNhoNhat) {
+			viTriNhoNhat = viTri;
+			soDuongDiNhoNhat = soDuongDi;
 
-			}
 		}
 	}
 
 	return viTriNhoNhat;
 }
 
-int tinhKhoangCachCanh(int i, int j) {
-	int khoangCachCanh = i < j ? i : j;
+int tinhSoDuongDi(MANG2D maTran, int i, int j) {
+	int soDuongDi = 0;
 
-	if (TOI_DA - 1 - i < khoangCachCanh)
-		khoangCachCanh = TOI_DA - 1 - i;
+	for (unsigned int viTri = 0; viTri < TOI_DA; viTri++)
+		if (i + HUONGDI_DOC[viTri] >= 0 && i + HUONGDI_DOC[viTri] < TOI_DA &&
+			j + HUONGDI_NGANG[viTri] >= 0 && j + HUONGDI_NGANG[viTri] < TOI_DA &&
+			maTran[i + HUONGDI_DOC[viTri]][j + HUONGDI_NGANG[viTri]] == 0)
+			soDuongDi++;
 
-	if (TOI_DA - 1 - j < khoangCachCanh)
-		khoangCachCanh = TOI_DA - 1 - j;
-
-	return khoangCachCanh;
+	return soDuongDi;
 }
-
-int tinhKhoangCachGoc(int i, int j) {
-	int iNhoNhat = i < TOI_DA - 1 - i ? i : TOI_DA - 1 - i;
-	int jNhoNhat = j < TOI_DA - 1 - j ? j : TOI_DA - 1 - j;
-
-	return iNhoNhat * iNhoNhat + jNhoNhat * jNhoNhat;
-}
-
